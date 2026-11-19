@@ -15,4 +15,4 @@ resources:
 images:
 - name: harbor.skala-us.com/u1-2/backend
   newName: harbor.skala-us.com/u1-2/backend
-  newTag: 19f150a019d226c999b5b62eae4b6f917a22700b
+  newTag: 816488c97038e8d75d3af5fd61319747b4a24acf
