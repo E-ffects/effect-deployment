@@ -9,9 +9,11 @@ resources:
 - backend/service.yaml
 - redis/deployment.yaml
 - redis/service.yaml
+- frontend/deployment.yaml
+- frontend/service.yaml
 - ingress.yaml
 
-# 이미지 태그는 effect-backend의 Deploy 워크플로가 커밋 SHA로 바꾼다
+# 이미지 태그는 각 저장소(effect-backend, effect-frontend)의 Deploy 워크플로가 커밋 SHA로 바꾼다
 images:
 - name: harbor.skala-us.com/u1-2/backend
   newName: harbor.skala-us.com/u1-2/backend
