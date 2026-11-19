@@ -4,14 +4,15 @@ kind: Kustomization
 namespace: u1-2
 
 resources:
-  - backend/configmap.yaml
-  - backend/deployment.yaml
-  - backend/service.yaml
-  - redis/deployment.yaml
-  - redis/service.yaml
-  - ingress.yaml
+- backend/configmap.yaml
+- backend/deployment.yaml
+- backend/service.yaml
+- redis/deployment.yaml
+- redis/service.yaml
+- ingress.yaml
 
 # 이미지 태그는 effect-backend의 Deploy 워크플로가 커밋 SHA로 바꾼다
 images:
-  - name: harbor.skala-us.com/u1-2/backend
-    newTag: latest
+- name: harbor.skala-us.com/u1-2/backend
+  newName: harbor.skala-us.com/u1-2/backend
+  newTag: 19f150a019d226c999b5b62eae4b6f917a22700b
