@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: u1-2
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - u1-2.skala-us.com
+      secretName: team-tls
+  rules:
+    - host: u1-2.skala-us.com
+      http:
+        paths:
+          # 경로를 자르지 않고 넘긴다. 백엔드 context-path가 /api다.
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 8000
